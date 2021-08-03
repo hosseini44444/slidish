@@ -5,13 +5,15 @@ components including images, videos, etc.
 
 ![npm](https://img.shields.io/npm/v/slidish?style=for-the-badge)
 
-<a href="https://hosseini44444.github.io/slidish/"
+<a href="https://hosseini44444.github.io/slidish/" target="_blank"
 style="display: inline-block; padding: 10px 15px; border: 2px solid #06d; margin: 10px 10px 20px 0;
 font-family: sans-serif; font-weight: bold;">DOCUMENTATION</a>
-<a href="https://hosseini44444.github.io/slidish/#/Playground"
+
+<a href="https://hosseini44444.github.io/slidish/#/Playground" target="_blank"
 style="display: inline-block; padding: 10px 15px; border: 2px solid #06d; margin: 0 10px 20px 0;
 font-family: sans-serif; font-weight: bold;">PLAYGROUND</a>
-<a href="https://hosseini44444.github.io/slidish/#/Fancy%20Demo"
+
+<a href="https://hosseini44444.github.io/slidish/#/Fancy%20Demo" target="_blank"
 style="display: inline-block; padding: 10px 15px; margin: 0 10px 20px 0; border: 2px solid #06d; font-family: sans-serif; font-weight: bold;">
 FANCY DEMO</a>
 
