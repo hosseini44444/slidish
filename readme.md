@@ -3,7 +3,7 @@
 Slidish is a ready to use, simple, highly customizable, responsive React component for building sliders of all types of
 components including images, videos, etc.
 
-![npm](https://img.shields.io/npm/v/hello-slider?style=for-the-badge)
+![npm](https://img.shields.io/npm/v/slidish?style=for-the-badge)
 
 <a href="https://hosseini44444.github.io/slidish/"
 style="display: inline-block; padding: 10px 15px; border: 2px solid #06d; margin: 10px 10px 20px 0;

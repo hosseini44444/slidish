@@ -8,26 +8,26 @@ import classes from "src/App.module.scss";
 <Slidish
   slideshow={{ autoplay: true }}
   classNames={{
-    root: classes["Slidish__root"],
-    rootFullscreen: classes["Slidish__root--fullscreen"],
-    slidesRoot: classes["Slidish__slides-root"],
-    slidesContainer: classes["Slidish__slides-container"],
-    slide: classes["Slidish__slide"],
-    thumbsRoot: classes["Slidish__thumbs-root"],
-    thumbsContainer: classes["Slidish__thumbs-container"],
-    thumb: classes["Slidish__thumb"],
-    activeThumb: classes["Slidish__thumb--active"],
-    indexIndicator: classes["Slidish__index-indicator"],
-    indicatorsContainer: classes["Slidish__indicators-container"],
-    indicator: classes["Slidish__indicator"],
-    activeIndicator: classes["Slidish__indicator--active"],
-    progressBarContainer: classes["Slidish__progress-bar-container"],
-    progressBar: classes["Slidish__progress-bar"],
-    previousButton: classes["Slidish__previous-button"],
-    nextButton: classes["Slidish__next-button"],
-    playButton: classes["Slidish__play-button"],
-    fullscreenCloseButton: classes["Slidish__close-button--fullscreen"],
-    fullscreenButton: classes["Slidish__fullscreen-button"],
+    root: classes["root"],
+    rootFullscreen: classes["root--fullscreen"],
+    slidesRoot: classes["slides-root"],
+    slidesContainer: classes["slides-container"],
+    slide: classes["slide"],
+    thumbsRoot: classes["thumbs-root"],
+    thumbsContainer: classes["thumbs-container"],
+    thumb: classes["thumb"],
+    activeThumb: classes["thumb--active"],
+    indexIndicator: classes["index-indicator"],
+    indicatorsContainer: classes["indicators-container"],
+    indicator: classes["indicator"],
+    activeIndicator: classes["indicator--active"],
+    progressBarContainer: classes["progress-bar-container"],
+    progressBar: classes["progress-bar"],
+    previousButton: classes["previous-button"],
+    nextButton: classes["next-button"],
+    playButton: classes["play-button"],
+    fullscreenCloseButton: classes["close-button--fullscreen"],
+    fullscreenButton: classes["fullscreen-button"],
   }}
 >
   <img src="images/1.jpg" className={classes.image} alt="" />
@@ -212,7 +212,7 @@ $film-color: #3e0f06;
   }
 }
 
-.Slidish__root {
+.root {
   @extend %noise;
   // for positioning controls, indicators, progressBar, ...
   position: relative;
@@ -231,8 +231,8 @@ $film-color: #3e0f06;
     box-sizing: border-box;
   }
 }
-.Slidish__root--fullscreen {
-  @extend .Slidish__root;
+.root--fullscreen {
+  @extend .root;
   position: fixed;
   top: 0;
   left: 0;
@@ -242,17 +242,17 @@ $film-color: #3e0f06;
   height: 100% !important;
   background-color: #000;
 }
-.Slidish__close-button {
+.close-button {
   display: none;
 }
-.Slidish__close-button--fullscreen {
+.close-button--fullscreen {
   @extend %button;
   display: block;
   top: 0;
   right: 0;
   z-index: 2147483647;
 }
-.Slidish__slides-root {
+.slides-root {
   // for positioning slides` children
   position: relative;
   width: 100%;
@@ -273,12 +273,12 @@ $film-color: #3e0f06;
     pointer-events: none;
   }
 }
-.Slidish__slides-container {
+.slides-container {
   display: flex;
   height: 100%;
   width: 100%;
 }
-.Slidish__slide {
+.slide {
   display: flex;
   // to avoid fitting it's content's width
   width: 100%;
@@ -295,28 +295,28 @@ $film-color: #3e0f06;
     filter: contrast(80%) brightness(140%);
   }
 }
-.Slidish__next-button {
+.next-button {
   @extend %button;
   top: 0;
   right: 0;
   height: 100%;
 }
-.Slidish__previous-button {
+.previous-button {
   @extend %button;
   top: 0;
   left: 0;
   height: 100%;
 }
-.Slidish__play-button {
+.play-button {
   @extend %button;
   bottom: 0;
 }
-.Slidish__fullscreen-button {
+.fullscreen-button {
   @extend %button;
   bottom: 0;
   right: 0;
 }
-.Slidish__index-indicator {
+.index-indicator {
   position: absolute;
   top: 8px;
   left: 0;
@@ -330,7 +330,7 @@ $film-color: #3e0f06;
   user-select: none;
   z-index: 1;
 }
-.Slidish__indicators-container {
+.indicators-container {
   /* To avoid covering slide content (like YouTube controls) and disabling slide pointer-events*/
   pointer-events: none;
   position: absolute;
@@ -344,7 +344,7 @@ $film-color: #3e0f06;
   padding: 0 56px;
   z-index: 1;
 }
-.Slidish__indicator {
+.indicator {
   /* to allow pointer-events on indicators while it is disabled in indicators' container div */
   pointer-events: auto;
   display: inline-flex;
@@ -387,12 +387,12 @@ $film-color: #3e0f06;
     }
   }
 }
-.Slidish__indicator--active {
+.indicator--active {
   background-color: #a00;
   border-color: #f00;
   transform: rotateZ(180deg) scaleY(1.5);
 }
-.Slidish__thumbs-root {
+.thumbs-root {
   position: relative;
   height: 120px !important;
   width: 100%;
@@ -413,11 +413,11 @@ $film-color: #3e0f06;
     border-bottom: 8px dashed #fff;
   }
 }
-.Slidish__thumbs-container {
+.thumbs-container {
   display: flex;
   height: 100%;
 }
-.Slidish__thumb {
+.thumb {
   position: relative;
   @extend %focus-effect;
   // for centering small thumbs
@@ -441,14 +441,14 @@ $film-color: #3e0f06;
     }
   }
 }
-.Slidish__thumb--active {
-  @extend .Slidish__thumb;
+.thumb--active {
+  @extend .thumb;
   img {
     filter: none;
     opacity: 100%;
   }
 }
-.Slidish__progress-bar-container {
+.progress-bar-container {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -456,7 +456,7 @@ $film-color: #3e0f06;
   overflow: hidden;
   z-index: 1;
 }
-.Slidish__progress-bar {
+.progress-bar {
   height: 6px;
   width: 100%;
   border: 1px solid transparent;
