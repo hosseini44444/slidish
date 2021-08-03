@@ -1,0 +1,6 @@
+__mocks__
+library
+dest
+build
+node_modules
+*.js

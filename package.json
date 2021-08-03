@@ -1,0 +1,138 @@
+{
+  "name": "reslide",
+  "version": "1.0.0",
+  "description": "Full-featured slider component for react",
+  "author": {
+    "name": "Abbas Hosseini",
+    "email": "hosseini44444@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hosseini44444/reslide.git"
+  },
+  "license": "MIT",
+  "homepage": "https://hosseini44444.github.io/reslide/",
+  "bugs": {
+    "url": "https://github.com/hosseini44444/reslide/issues"
+  },
+  "keywords": [
+    "react",
+    "slider",
+    "carousel",
+    "image",
+    "gallery",
+    "slideshow",
+    "swiper",
+    "responsive",
+    "mobile-friendly",
+    "touch"
+  ],
+  "main": "library/cjs/index.js",
+  "module": "library/index.js",
+  "types": "library/types/index.d.ts",
+  "files": [
+    "library/**/*",
+    "style.css"
+  ],
+  "scripts": {
+    "browsersList:update": "browserslist --update-db",
+    "start": "cross-env NODE_ENV=development webpack serve --config webpack.dev.js",
+    "start:docs": "styleguidist server --open",
+    "build:demo": "npm run browsersList:update && cross-env BABEL_SHOW_CONFIG_FOR=./src/components/slider/index.tsx NODE_ENV=production webpack",
+    "build": "npm run browsersList:update && eslint src && npm run test && npm run delete-library && npm run build:types && npm run build:lib && npm run build:cjs && npm run generate-style && npm run build:docs",
+    "build:lib": "cross-env NODE_ENV=production babel src --out-dir library --extensions \".ts\",\".tsx\" --ignore \"src/**/*.d.ts\",\"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/App.tsx\",\"src/demo.tsx\" --no-babelrc --config-file ./.babelrc.lib.json",
+    "build:cjs": "cross-env NODE_ENV=production babel src --out-dir library/cjs --extensions \".ts\",\".tsx\" --ignore \"src/**/*.d.ts\",\"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/App.tsx\",\"src/demo.tsx\" --no-babelrc --config-file ./.babelrc.cjs.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:docs": "styleguidist build && cp 404.md docs",
+    "generate-style": "sass ./src/style.scss --no-source-map | postcss --no-map --use autoprefixer -o style.css",
+    "delete-library": "rm -rf ./library",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "postversion": "git push && git push --tags"
+  },
+  "peerDependencies": {
+    "react": "16.8.0 - 17",
+    "react-dom": "16.8.0 - 17"
+  },
+  "dependencies": {
+    "@juggle/resize-observer": "^3.3.1",
+    "react-fast-compare": "^3.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/youtube": "^0.0.44",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-auto-import": "^1.1.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "browserslist": "^4.16.6",
+    "copy-webpack-plugin": "^9.0.1",
+    "core-js": "^3.15.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.0.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "eslint": "^7.30.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
+    "mini-css-extract-plugin": "^2.1.0",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "postcss-loader": "^6.1.1",
+    "react": "16.8.0 - 17",
+    "react-dom": "16.8.0 - 17",
+    "react-styleguidist": "^11.1.7",
+    "react-youtube": "^7.13.1",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.1.0",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "webpack": "^5.45.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 75,
+        "functions": 75,
+        "lines": 75,
+        "statements": 75
+      }
+    },
+    "moduleNameMapper": {
+      "^components/(.*)$": "<rootDir>/src/components/$1",
+      "^hooks/(.*)$": "<rootDir>/src/hooks/$1",
+      "^store/(.*)$": "<rootDir>/src/store/$1",
+      "^src/(.*)$": "<rootDir>/src/$1",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|sass)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
+    "testEnvironment": "jsdom"
+  }
+}

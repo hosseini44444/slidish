@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "outDir": "./.dest",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    // Setting the isolatedModules flag tells TypeScript to warn you if you write certain code that can’t be correctly
+    // interpreted by a single-file transpilation process.
+    // It does not change the behavior of your code, or otherwise change the behavior of TypeScript’s checking and
+    // emitting process.
+    "isolatedModules": true,
+    "allowJs": true,
+    // if it was "react" then React needed to be in the scope
+    // @see [New JSX transformation](https://github.com/microsoft/TypeScript/pull/39199)
+    "jsx": "react-jsx",
+    // Just needed for library (package) production
+    // "declaration": true,
+    // Needed in development otherwise babel's sourcemaps will be used which will refer to javascript files which are
+    // transpiled from typescript using babel
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,48 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "targets": {
+              "browsers": "last 2 versions"
+            },
+            "useBuiltIns": "usage",
+            "corejs": "3.15"
+          }
+        ]
+        // The following 2 lines are not needed since we're using typescript-loader in webpack
+        // But styleguidist requires them
+        , "@babel/react"
+        ,["@babel/typescript", { "onlyRemoveTypeImports": true }]
+      ],
+      "plugins": ["react-refresh/babel"]
+    },
+    "production": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "useBuiltIns": "usage",
+            "corejs": "3.15"
+          }
+        ]
+      ]
+    },
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": "commonjs",
+            "targets": { "node": "current" }
+          }
+        ],
+        // The following 2 lines are needed since we're not using webpack for testing
+        "@babel/preset-react",
+        ["@babel/typescript", { "onlyRemoveTypeImports": true }]
+      ]
+    }
+  }
+}

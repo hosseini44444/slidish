@@ -1,0 +1,22 @@
+{
+  "presets": ["@babel/react", ["@babel/typescript", { "onlyRemoveTypeImports": true }]],
+  "plugins": [
+    [
+      "auto-import",
+      {
+        "declarations": [{ "default": "React", "path": "react" }]
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "src": "./src",
+          "components": "./src/components",
+          "hooks": "./src/hooks",
+          "store": "./src/store"
+        }
+      }
+    ]
+  ]
+}

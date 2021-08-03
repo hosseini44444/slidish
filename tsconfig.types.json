@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "outDir": "./library/types",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    // Setting the isolatedModules flag tells TypeScript to warn you if you write certain code that can’t be correctly
+    // interpreted by a single-file transpilation process.
+    // It does not change the behavior of your code, or otherwise change the behavior of TypeScript’s checking and
+    // emitting process.
+    "isolatedModules": true,
+    "allowJs": true,
+    // if it was "react" then React needed to be in the scope
+    // @see [react-jsx](https://github.com/microsoft/TypeScript/pull/39199)
+    "jsx": "react-jsx",
+    "declaration": true,
+    // Generates a source map for .d.ts files which map back to the original .ts source file.
+    // This will allow editors such as VS Code to go to the original .ts file when using features like Go to Definition.
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "exclude": ["src/demo.tsx", "src/App.tsx"]
+}
