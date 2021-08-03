@@ -8,7 +8,7 @@ module.exports = {
   styleguideDir: "docs",
   // An object with options to add a favicon, meta tags, inline JavaScript or CSS, etc. See @vxna/mini-html-webpack-template docs.
   template: {
-    favicon: "/favicon.ico",
+    favicon: "favicon.ico",
     head: {
       meta: [
         {
