@@ -1,16 +1,16 @@
 If you want to test something that depends on this component then you need to set the `testing` prop to `true`.
 
 ```jsx static
-import Reslide from "reslide";
+import Slidish from "slidish";
 
-<Reslide testing={true}>
+<Slidish testing={true}>
   <span>1</span>
   <span>2</span>
   <span>3</span>
-</Reslide>;
+</Slidish>;
 ```
 
-Also you might need to mock `css` imports because **Reslide** exports it's styles using a `style.css` file.
+Also you might need to mock `css` imports because **Slidish** exports it's styles using a `style.css` file.
 
 You might also need to mock `ResizeObserver` and `IntersectionObserver` if you want to enable the `lazyLoading` option.
 

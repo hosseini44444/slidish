@@ -1,13 +1,13 @@
-You can use the Reslide's methods by using a `ref` like below:
+You can use the Slidish's methods by using a `ref` like below:
 
 ```jsx static
 import React, { useRef, useState } from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
 const Example = () => {
-  const reslideRef = useRef(null);
-  const [reslideState, setReslideState] = useState(null);
+  const slidishRef = useRef(null);
+  const [slidishState, setSlidishState] = useState(null);
   const bStyle = {
     display: "inline-block",
     padding: "10px 15px",
@@ -18,7 +18,7 @@ const Example = () => {
   };
   return (
     <React.Fragment>
-      <Reslide ref={reslideRef}>
+      <Slidish ref={slidishRef}>
         <img src="images/1.jpg" alt="space shuttle failure" />
         <img src="images/2.jpg" alt="space shuttle lunch" />
         <img src="images/3.jpg" alt="space shuttle lunch 2" />
@@ -28,31 +28,31 @@ const Example = () => {
         <img src="images/7.jpg" alt="astronomical image 3" />
         <img src="images/8.jpg" alt="astronomical image 4" />
         <img src="images/9.jpg" alt="astronomical image 5" />
-      </Reslide>
+      </Slidish>
 
-      <button style={bStyle} onClick={() => reslideRef.current.next()}>
+      <button style={bStyle} onClick={() => slidishRef.current.next()}>
         NEXT SLIDE
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.previous()}>
+      <button style={bStyle} onClick={() => slidishRef.current.previous()}>
         PREVIOUS SLIDE
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.goto(4)}>
+      <button style={bStyle} onClick={() => slidishRef.current.goto(4)}>
         GO TO 5TH SLIDE
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.play()}>
+      <button style={bStyle} onClick={() => slidishRef.current.play()}>
         START SLIDESHOW
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.pause()}>
+      <button style={bStyle} onClick={() => slidishRef.current.pause()}>
         PAUSE SLIDESHOW
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.goFullscreen()}>
+      <button style={bStyle} onClick={() => slidishRef.current.goFullscreen()}>
         GO FULLSCREEN
       </button>
-      <button style={bStyle} onClick={() => setReslideState(JSON.stringify(reslideRef.current.getState()))}>
+      <button style={bStyle} onClick={() => setSlidishState(JSON.stringify(slidishRef.current.getState()))}>
         GET STATE
       </button>
 
-      {reslideState && <div>Latest grabbed state: {reslideState}</div>}
+      {slidishState && <div>Latest grabbed state: {slidishState}</div>}
     </React.Fragment>
   );
 };
@@ -62,12 +62,12 @@ export default Example;
 
 ```jsx
 import React, { useRef, useState } from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
 const Example = () => {
-  const reslideRef = useRef(null);
-  const [reslideState, setReslideState] = useState(null);
+  const slidishRef = useRef(null);
+  const [slidishState, setSlidishState] = useState(null);
   const bStyle = {
     display: "inline-block",
     padding: "10px 15px",
@@ -78,8 +78,8 @@ const Example = () => {
   };
   return (
     <React.Fragment>
-      <Reslide ref={reslideRef} advanced={{ slideStopPropagation: false }}>
-        <button style={bStyle} onClick={() => reslideRef.current.exitFullscreen()}>
+      <Slidish ref={slidishRef} advanced={{ slideStopPropagation: false }}>
+        <button style={bStyle} onClick={() => slidishRef.current.exitFullscreen()}>
           EXIT FULLSCREEN
         </button>
         <img src="images/1.jpg" alt="space shuttle failure" />
@@ -91,31 +91,31 @@ const Example = () => {
         <img src="images/7.jpg" alt="astronomical image 3" />
         <img src="images/8.jpg" alt="astronomical image 4" />
         <img src="images/9.jpg" alt="astronomical image 5" />
-      </Reslide>
+      </Slidish>
 
-      <button style={bStyle} onClick={() => reslideRef.current.next()}>
+      <button style={bStyle} onClick={() => slidishRef.current.next()}>
         NEXT SLIDE
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.previous()}>
+      <button style={bStyle} onClick={() => slidishRef.current.previous()}>
         PREVIOUS SLIDE
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.goto(4)}>
+      <button style={bStyle} onClick={() => slidishRef.current.goto(4)}>
         GO TO 5TH SLIDE
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.play()}>
+      <button style={bStyle} onClick={() => slidishRef.current.play()}>
         START SLIDESHOW
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.pause()}>
+      <button style={bStyle} onClick={() => slidishRef.current.pause()}>
         PAUSE SLIDESHOW
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.goFullscreen()}>
+      <button style={bStyle} onClick={() => slidishRef.current.goFullscreen()}>
         GO FULLSCREEN
       </button>
-      <button style={bStyle} onClick={() => setReslideState(JSON.stringify(reslideRef.current.getState()))}>
+      <button style={bStyle} onClick={() => setSlidishState(JSON.stringify(slidishRef.current.getState()))}>
         GET STATE
       </button>
 
-      {reslideState && <div>Latest grabbed state: {reslideState}</div>}
+      {slidishState && <div>Latest grabbed state: {slidishState}</div>}
     </React.Fragment>
   );
 };

@@ -72,7 +72,7 @@
   @extend %focus-effect;
 }
 
-.Reslide__root {
+.Slidish__root {
   // for positioning controls, indicators, progressBar, ...
   position: relative;
   width: 100%;
@@ -90,8 +90,8 @@
     box-sizing: border-box;
   }
 }
-.Reslide__root--fullscreen {
-  @extend .Reslide__root;
+.Slidish__root--fullscreen {
+  @extend .Slidish__root;
   position: fixed;
   top: 0;
   left: 0;
@@ -101,17 +101,17 @@
   height: 100% !important;
   background-color: #000;
 }
-.Reslide__close-button {
+.Slidish__close-button {
   display: none;
 }
-.Reslide__close-button--fullscreen {
+.Slidish__close-button--fullscreen {
   @extend %button;
   display: block;
   top: 0;
   right: 0;
   z-index: 2147483647;
 }
-.Reslide__slides-root {
+.Slidish__slides-root {
   // for positioning slides` children
   position: relative;
   width: 100%;
@@ -119,12 +119,12 @@
   flex: 1;
   overflow: hidden;
 }
-.Reslide__slides-container {
+.Slidish__slides-container {
   display: flex;
   height: 100%;
   width: 100%;
 }
-.Reslide__slide {
+.Slidish__slide {
   display: flex;
   // to avoid fitting it's content's width
   width: 100%;
@@ -139,28 +139,28 @@
     max-height: 100%;
   }
 }
-.Reslide__next-button {
+.Slidish__next-button {
   @extend %button;
   top: 0;
   right: 0;
   height: 100%;
 }
-.Reslide__previous-button {
+.Slidish__previous-button {
   @extend %button;
   top: 0;
   left: 0;
   height: 100%;
 }
-.Reslide__play-button {
+.Slidish__play-button {
   @extend %button;
   bottom: 0;
 }
-.Reslide__fullscreen-button {
+.Slidish__fullscreen-button {
   @extend %button;
   bottom: 0;
   right: 0;
 }
-.Reslide__index-indicator {
+.Slidish__index-indicator {
   position: absolute;
   top: 8px;
   left: 0;
@@ -173,7 +173,7 @@
   border-radius: 5px;
   user-select: none;
 }
-.Reslide__indicators-container {
+.Slidish__indicators-container {
   /* To avoid covering slide content (like YouTube controls) and disabling slide pointer-events*/
   pointer-events: none;
   position: absolute;
@@ -184,7 +184,7 @@
   width: 100%;
   padding: 0 56px;
 }
-.Reslide__indicator {
+.Slidish__indicator {
   /* to allow pointer-events on indicators while it is disabled in indicators' container div */
   pointer-events: auto;
   display: inline-flex;
@@ -224,21 +224,21 @@
     }
   }
 }
-.Reslide__indicator--active {
+.Slidish__indicator--active {
   background-color: #000b;
   border-color: #fff9;
 }
-.Reslide__thumbs-root {
+.Slidish__thumbs-root {
   height: 20%;
   width: 100%;
   padding: 8px 0;
   overflow: hidden;
 }
-.Reslide__thumbs-container {
+.Slidish__thumbs-container {
   display: flex;
   height: 100%;
 }
-.Reslide__thumb {
+.Slidish__thumb {
   position: relative;
   @extend %focus-effect;
   // for centering small thumbs
@@ -256,18 +256,18 @@
     max-height: 100%;
   }
 }
-.Reslide__thumb--active {
+.Slidish__thumb--active {
   box-shadow: 2px 3px 8px #0009;
   border: 2px solid #07d;
 }
-.Reslide__progress-bar-container {
+.Slidish__progress-bar-container {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
 }
-.Reslide__progress-bar {
+.Slidish__progress-bar {
   background-color: #07d;
   height: 5px;
   width: 100%;

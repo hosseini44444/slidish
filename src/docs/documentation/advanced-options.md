@@ -18,7 +18,7 @@ _Drag and release the slides to check the increased sliding sensitivity.
 Click on the `VIEW CODE` button below the example and view and edit the full code using the live code editor
 
 ```jsx
-<Reslide
+<Slidish
   advanced={{
     hardwareAcceleration: true,
     slideStopPropagation: true,
@@ -38,7 +38,7 @@ Click on the `VIEW CODE` button below the example and view and edit the full cod
   <img src="images/7.jpg" alt="astronomical image 3" />
   <img src="images/8.jpg" alt="astronomical image 4" />
   <img src="images/9.jpg" alt="astronomical image 5" />
-</Reslide>
+</Slidish>
 ```
 
 <a class="previous-section" href="#/Documentation/Main%20Options">Main Options</a>

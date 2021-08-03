@@ -1,5 +1,5 @@
 {
-  "name": "reslide",
+  "name": "slidish",
   "version": "1.0.0",
   "description": "Full-featured slider component for react",
   "author": {
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hosseini44444/reslide.git"
+    "url": "https://github.com/hosseini44444/slidish.git"
   },
   "license": "MIT",
-  "homepage": "https://hosseini44444.github.io/reslide/",
+  "homepage": "https://hosseini44444.github.io/slidish/",
   "bugs": {
-    "url": "https://github.com/hosseini44444/reslide/issues"
+    "url": "https://github.com/hosseini44444/slidish/issues"
   },
   "keywords": [
     "react",

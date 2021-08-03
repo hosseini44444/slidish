@@ -1,4 +1,4 @@
-Reslide is built with compatibility in mind and supports all major web browsers including their mobile versions and is
+Slidish is built with compatibility in mind and supports all major web browsers including their mobile versions and is
 tested on these web browsers:
 
 - Google Chrome
@@ -13,7 +13,7 @@ No extra configuration is needed if you are using `create-react-app`, `Nextjs`, 
 
 **_Read further only if you want to setup your project manually (for example by using a bundler like webpack)._**
 
-Reslide package is shipped in es2020 syntax, so if you need to transpile it using babel the following babel
+Slidish package is shipped in es2020 syntax, so if you need to transpile it using babel the following babel
 configuration will do the trick:
 
 ```json

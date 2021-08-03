@@ -1,4 +1,4 @@
-Reslide's layout consists of the following components which can be disabled by setting the keys in the `layout` prop to false
+Slidish's layout consists of the following components which can be disabled by setting the keys in the `layout` prop to false
 
 | key                   | type    | default value | explanation                                                                      |
 | --------------------- | ------- | ------------- | -------------------------------------------------------------------------------- |
@@ -15,8 +15,8 @@ Reslide's layout consists of the following components which can be disabled by s
 
 ```jsx
 import React, { useState } from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
 const Example = () => {
   const [layoutState, setLayoutState] = useState({
@@ -56,12 +56,12 @@ const Example = () => {
         </span>
       ))}
 
-      <Reslide layout={layoutState}>
+      <Slidish layout={layoutState}>
         <span style={{ fontSize: "3rem" }}>1</span>
         <span style={{ fontSize: "3rem" }}>2</span>
         <span style={{ fontSize: "3rem" }}>3</span>
         <span style={{ fontSize: "3rem" }}>4</span>
-      </Reslide>
+      </Slidish>
     </>
   );
 };

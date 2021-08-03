@@ -444,26 +444,26 @@ const defaultLazyOptions: LazyOptions = {
 };
 
 const defaultClasses: Classes = {
-  root: "Reslide__root",
-  rootFullscreen: "Reslide__root--fullscreen",
-  slidesRoot: "Reslide__slides-root",
-  slidesContainer: "Reslide__slides-container",
-  slide: "Reslide__slide",
-  thumbsRoot: "Reslide__thumbs-root",
-  thumbsContainer: "Reslide__thumbs-container",
-  thumb: "Reslide__thumb",
-  activeThumb: "Reslide__thumb--active",
-  indexIndicator: "Reslide__index-indicator",
-  indicatorsContainer: "Reslide__indicators-container",
-  indicator: "Reslide__indicator",
-  activeIndicator: "Reslide__indicator--active",
-  progressBarContainer: "Reslide__progress-bar-container",
-  progressBar: "Reslide__progress-bar",
-  previousButton: "Reslide__previous-button",
-  nextButton: "Reslide__next-button",
-  playButton: "Reslide__play-button",
-  fullscreenCloseButton: "Reslide__close-button--fullscreen",
-  fullscreenButton: "Reslide__fullscreen-button",
+  root: "Slidish__root",
+  rootFullscreen: "Slidish__root--fullscreen",
+  slidesRoot: "Slidish__slides-root",
+  slidesContainer: "Slidish__slides-container",
+  slide: "Slidish__slide",
+  thumbsRoot: "Slidish__thumbs-root",
+  thumbsContainer: "Slidish__thumbs-container",
+  thumb: "Slidish__thumb",
+  activeThumb: "Slidish__thumb--active",
+  indexIndicator: "Slidish__index-indicator",
+  indicatorsContainer: "Slidish__indicators-container",
+  indicator: "Slidish__indicator",
+  activeIndicator: "Slidish__indicator--active",
+  progressBarContainer: "Slidish__progress-bar-container",
+  progressBar: "Slidish__progress-bar",
+  previousButton: "Slidish__previous-button",
+  nextButton: "Slidish__next-button",
+  playButton: "Slidish__play-button",
+  fullscreenCloseButton: "Slidish__close-button--fullscreen",
+  fullscreenButton: "Slidish__fullscreen-button",
 };
 
 const defaultStyles: Styles = {
@@ -600,7 +600,7 @@ interface Props {
  * Full-featured slider component for react
  * @author [Abbas Hosseini](https://github.com/hosseini44444)
  */
-export const Reslide = forwardRef<Methods, Props>(
+export const Slidish = forwardRef<Methods, Props>(
   (
     {
       children,
@@ -719,7 +719,7 @@ export const Reslide = forwardRef<Methods, Props>(
     );
 
     const fullscreenCloseButtonClassName = useMemo(
-      () => (isFullscreen ? _classes.fullscreenCloseButton : "Reslide__close-button"),
+      () => (isFullscreen ? _classes.fullscreenCloseButton : "Slidish__close-button"),
       [isFullscreen, _classes.fullscreenCloseButton]
     );
 
@@ -910,10 +910,10 @@ export const Reslide = forwardRef<Methods, Props>(
   }
 );
 
-const MemorizedReslide = memo<Props>(Reslide, isEqual);
+const MemorizedSlidish = memo<Props>(Slidish, isEqual);
 
-Reslide.displayName = "Reslide";
+Slidish.displayName = "Slidish";
 
-MemorizedReslide.displayName = "MemorizedReslide";
+MemorizedSlidish.displayName = "MemorizedSlidish";
 
-export default MemorizedReslide;
+export default MemorizedSlidish;

@@ -18,7 +18,7 @@ You can specify the main options using the `options` prop which is an object wit
 Click on the `VIEW CODE` button below the example and view and edit the full code using the live code editor
 
 ```jsx
-<Reslide
+<Slidish
   options={{
     height: "400px",
     width: "50%",
@@ -43,7 +43,7 @@ Click on the `VIEW CODE` button below the example and view and edit the full cod
   <img src="images/7.jpg" alt="astronomical image 3" />
   <img src="images/8.jpg" alt="astronomical image 4" />
   <img src="images/9.jpg" alt="astronomical image 5" />
-</Reslide>
+</Slidish>
 ```
 
 <a class="previous-section" href="#/Documentation/Getting%20Started">Getting Started</a>

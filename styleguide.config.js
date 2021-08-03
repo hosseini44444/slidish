@@ -3,7 +3,7 @@ const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  title: "Slider component for React - Reslide",
+  title: "Slider component for React - Slidish",
   // Folder for static HTML style guide generated with styleguidist build command.
   styleguideDir: "docs",
   // An object with options to add a favicon, meta tags, inline JavaScript or CSS, etc. See @vxna/mini-html-webpack-template docs.
@@ -20,7 +20,7 @@ module.exports = {
         {
           name: "keywords",
           content:
-            "react, slider, carousel, image, gallery, reslide, slideshow, swiper, responsive, mobile-friendly, touch",
+            "react, slider, carousel, image, gallery, slidish, slideshow, swiper, responsive, mobile-friendly, touch",
         },
       ],
       raw: `<style>
@@ -61,7 +61,7 @@ module.exports = {
   // components: "src/components/slider/index.tsx",
   // Modules that are required for your style guide. Useful for third-party styles or polyfills.
   require: [
-    // // For making `Reslide` available in every example
+    // // For making `Slidish` available in every example
     path.resolve(__dirname, "src", "styleguide", "setup.js"),
     path.resolve(__dirname, "src", "style.scss"),
   ],
@@ -182,7 +182,7 @@ module.exports = {
         components: path.resolve(__dirname, "src/components/"),
         hooks: path.resolve(__dirname, "src/hooks/"),
         store: path.resolve(__dirname, "src/store/"),
-        reslide: path.resolve(__dirname, "src"),
+        slidish: path.resolve(__dirname, "src"),
       },
     },
   },

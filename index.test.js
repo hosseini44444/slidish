@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 
 import Slider from "./src/components/slider";
 
-describe("[Reslide] methods", () => {
+describe("[Slidish] methods", () => {
   let ref = { current: null },
     getByTestId,
     getByRole;
@@ -36,14 +36,14 @@ describe("[Reslide] methods", () => {
   });
   it("should go fullscreen on calling goFullscreen and exit fullscreen on calling exitFullscreen", () => {
     const root = getByTestId("root");
-    expect(root.classList.contains("Reslide__root")).toBe(true);
-    expect(root.classList.contains("Reslide__root--fullscreen")).toBe(false);
+    expect(root.classList.contains("Slidish__root")).toBe(true);
+    expect(root.classList.contains("Slidish__root--fullscreen")).toBe(false);
     act(() => ref.current.goFullscreen());
-    expect(root.classList.contains("Reslide__root--fullscreen")).toBe(true);
-    expect(root.classList.contains("Reslide__root")).toBe(false);
+    expect(root.classList.contains("Slidish__root--fullscreen")).toBe(true);
+    expect(root.classList.contains("Slidish__root")).toBe(false);
     act(() => ref.current.exitFullscreen());
-    expect(root.classList.contains("Reslide__root")).toBe(true);
-    expect(root.classList.contains("Reslide__root--fullscreen")).toBe(false);
+    expect(root.classList.contains("Slidish__root")).toBe(true);
+    expect(root.classList.contains("Slidish__root--fullscreen")).toBe(false);
   });
   it("should change isPlaying state to true when calling play and change it to false when calling pause", () => {
     const playButton = getByRole("button", { name: "start slideshow" });
@@ -69,7 +69,7 @@ describe("[Reslide] methods", () => {
   });
 });
 
-describe("[Reslide] functionality", () => {
+describe("[Slidish] functionality", () => {
   let slidesContainer,
     rerender,
     getByTestId,
@@ -94,7 +94,7 @@ describe("[Reslide] functionality", () => {
   });
 
   it("should render 3 slides", () => {
-    const slides = document.querySelectorAll(".Reslide__slide");
+    const slides = document.querySelectorAll(".Slidish__slide");
     expect(slides.length).toBe(3);
   });
   it("should go to next or previous slide on clicking the next or previous button", () => {
@@ -316,7 +316,7 @@ describe("[Reslide] functionality", () => {
   });
 });
 
-describe("[Reslide] event callbacks", () => {
+describe("[Slidish] event callbacks", () => {
   let ref = { current: null },
     getByTestId,
     slidesContainer,
@@ -390,7 +390,7 @@ describe("[Reslide] event callbacks", () => {
   });
 });
 
-describe("[Reslide] thumbnails functionality", () => {
+describe("[Slidish] thumbnails functionality", () => {
   let thumbsContainer,
     rerender,
     getByTestId,

@@ -1,3 +1,3 @@
-import Reslide from "../index.ts";
+import Slidish from "../index.ts";
 
-global.Reslide = Reslide;
+global.Slidish = Slidish;

@@ -4,10 +4,10 @@
 
 ```jsx
 import React from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
-<Reslide>
+<Slidish>
   <img src="images/1.jpg" alt="space shuttle failure" />
   <img src="images/2.jpg" alt="space shuttle lunch" />
   <img src="images/3.jpg" alt="space shuttle lunch 2" />
@@ -17,7 +17,7 @@ import "reslide/style.css";
   <img src="images/7.jpg" alt="astronomical image 3" />
   <img src="images/8.jpg" alt="astronomical image 4" />
   <img src="images/9.jpg" alt="astronomical image 5" />
-</Reslide>;
+</Slidish>;
 ```
 
 ### Advanced - Pre-populated with default props (except thumbs and ref)
@@ -26,12 +26,12 @@ Click on the `VIEW CODE` button below the example and view and edit the full cod
 
 ```jsx
 import React, { useRef, useState } from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
 const Example = () => {
-  const reslideRef = useRef(null);
-  const [reslideState, setReslideState] = useState(null);
+  const slidishRef = useRef(null);
+  const [slidishState, setSlidishState] = useState(null);
   const bStyle = {
     display: "inline-block",
     padding: "10px 15px",
@@ -42,8 +42,8 @@ const Example = () => {
   };
   return (
     <React.Fragment>
-      <Reslide
-        ref={reslideRef}
+      <Slidish
+        ref={slidishRef}
         layout={{
           slides: true,
           thumbs: true,
@@ -104,26 +104,26 @@ const Example = () => {
           onFullscreenExit: undefined,
         }}
         classNames={{
-          root: "Reslide__root",
-          rootFullscreen: "Reslide__root--fullscreen",
-          slidesRoot: "Reslide__slides-root",
-          slidesContainer: "Reslide__slides-container",
-          slide: "Reslide__slide",
-          thumbsRoot: "Reslide__thumbs-root",
-          thumbsContainer: "Reslide__thumbs-container",
-          thumb: "Reslide__thumb",
-          activeThumb: "Reslide__thumb--active",
-          indexIndicator: "Reslide__index-indicator",
-          indicatorsContainer: "Reslide__indicators-container",
-          indicator: "Reslide__indicator",
-          activeIndicator: "Reslide__indicator--active",
-          progressBarContainer: "Reslide__progress-bar-container",
-          progressBar: "Reslide__progress-bar",
-          previousButton: "Reslide__previous-button",
-          nextButton: "Reslide__next-button",
-          playButton: "Reslide__play-button",
-          fullscreenCloseButton: "Reslide__close-button--fullscreen",
-          fullscreenButton: "Reslide__fullscreen-button",
+          root: "Slidish__root",
+          rootFullscreen: "Slidish__root--fullscreen",
+          slidesRoot: "Slidish__slides-root",
+          slidesContainer: "Slidish__slides-container",
+          slide: "Slidish__slide",
+          thumbsRoot: "Slidish__thumbs-root",
+          thumbsContainer: "Slidish__thumbs-container",
+          thumb: "Slidish__thumb",
+          activeThumb: "Slidish__thumb--active",
+          indexIndicator: "Slidish__index-indicator",
+          indicatorsContainer: "Slidish__indicators-container",
+          indicator: "Slidish__indicator",
+          activeIndicator: "Slidish__indicator--active",
+          progressBarContainer: "Slidish__progress-bar-container",
+          progressBar: "Slidish__progress-bar",
+          previousButton: "Slidish__previous-button",
+          nextButton: "Slidish__next-button",
+          playButton: "Slidish__play-button",
+          fullscreenCloseButton: "Slidish__close-button--fullscreen",
+          fullscreenButton: "Slidish__fullscreen-button",
         }}
         styles={{
           root: {},
@@ -168,31 +168,31 @@ const Example = () => {
         <img src="images/7.jpg" alt="astronomical image 3" />
         <img src="images/8.jpg" alt="astronomical image 4" />
         <img src="images/9.jpg" alt="astronomical image 5" />
-      </Reslide>
+      </Slidish>
 
-      <button style={bStyle} onClick={() => reslideRef.current.next()}>
+      <button style={bStyle} onClick={() => slidishRef.current.next()}>
         NEXT SLIDE
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.previous()}>
+      <button style={bStyle} onClick={() => slidishRef.current.previous()}>
         PREVIOUS SLIDE
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.goto(4)}>
+      <button style={bStyle} onClick={() => slidishRef.current.goto(4)}>
         GO TO 5TH SLIDE
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.play()}>
+      <button style={bStyle} onClick={() => slidishRef.current.play()}>
         START SLIDESHOW
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.pause()}>
+      <button style={bStyle} onClick={() => slidishRef.current.pause()}>
         PAUSE SLIDESHOW
       </button>
-      <button style={bStyle} onClick={() => reslideRef.current.goFullscreen()}>
+      <button style={bStyle} onClick={() => slidishRef.current.goFullscreen()}>
         GO FULLSCREEN
       </button>
-      <button style={bStyle} onClick={() => setReslideState(JSON.stringify(reslideRef.current.getState()))}>
+      <button style={bStyle} onClick={() => setSlidishState(JSON.stringify(slidishRef.current.getState()))}>
         GET STATE
       </button>
 
-      {reslideState && <div>Latest grabbed state: {reslideState}</div>}
+      {slidishState && <div>Latest grabbed state: {slidishState}</div>}
     </React.Fragment>
   );
 };

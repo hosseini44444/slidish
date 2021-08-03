@@ -57,7 +57,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "index.html",
-      title: "Reslide - Full-featured slider component for react",
+      title: "Slidish - Full-featured slider component for react",
       // // Modern browsers support non blocking javascript loading ('defer') to improve the page startup performance.
       // scriptLoading: "blocking",
     }),

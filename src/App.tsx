@@ -7,13 +7,13 @@ import classes from "./App.module.scss";
 import type { Methods } from "components/slider";
 
 const App: React.FC<{}> = function () {
-  const reslideRef = useRef<Methods>(null);
+  const slidishRef = useRef<Methods>(null);
   const youtubePlayer = useRef<YT.Player | null>(null);
   const [stopOnPrev, setStopOnPrev] = useState(true);
   const [showSlider, setShowSlider] = useState(true);
   const [thumbs, setThumbs] = useState<number[]>([]);
 
-  const slidesCount = reslideRef.current?.getState().slidesCount;
+  const slidesCount = slidishRef.current?.getState().slidesCount;
 
   // useEffect(
   //   () =>
@@ -29,7 +29,7 @@ const App: React.FC<{}> = function () {
     <>
       {showSlider ? (
         <Slider
-          ref={reslideRef}
+          ref={slidishRef}
           layout={
             {
               // slides: true,
@@ -98,26 +98,26 @@ const App: React.FC<{}> = function () {
             }
           }
           classNames={{
-            root: classes["Reslide__root"],
-            rootFullscreen: classes["Reslide__root--fullscreen"],
-            slidesRoot: classes["Reslide__slides-root"],
-            slidesContainer: classes["Reslide__slides-container"],
-            slide: classes["Reslide__slide"],
-            thumbsRoot: classes["Reslide__thumbs-root"],
-            thumbsContainer: classes["Reslide__thumbs-container"],
-            thumb: classes["Reslide__thumb"],
-            activeThumb: classes["Reslide__thumb--active"],
-            indexIndicator: classes["Reslide__index-indicator"],
-            indicatorsContainer: classes["Reslide__indicators-container"],
-            indicator: classes["Reslide__indicator"],
-            activeIndicator: classes["Reslide__indicator--active"],
-            progressBarContainer: classes["Reslide__progress-bar-container"],
-            progressBar: classes["Reslide__progress-bar"],
-            previousButton: classes["Reslide__previous-button"],
-            nextButton: classes["Reslide__next-button"],
-            playButton: classes["Reslide__play-button"],
-            fullscreenCloseButton: classes["Reslide__close-button--fullscreen"],
-            fullscreenButton: classes["Reslide__fullscreen-button"],
+            root: classes["Slidish__root"],
+            rootFullscreen: classes["Slidish__root--fullscreen"],
+            slidesRoot: classes["Slidish__slides-root"],
+            slidesContainer: classes["Slidish__slides-container"],
+            slide: classes["Slidish__slide"],
+            thumbsRoot: classes["Slidish__thumbs-root"],
+            thumbsContainer: classes["Slidish__thumbs-container"],
+            thumb: classes["Slidish__thumb"],
+            activeThumb: classes["Slidish__thumb--active"],
+            indexIndicator: classes["Slidish__index-indicator"],
+            indicatorsContainer: classes["Slidish__indicators-container"],
+            indicator: classes["Slidish__indicator"],
+            activeIndicator: classes["Slidish__indicator--active"],
+            progressBarContainer: classes["Slidish__progress-bar-container"],
+            progressBar: classes["Slidish__progress-bar"],
+            previousButton: classes["Slidish__previous-button"],
+            nextButton: classes["Slidish__next-button"],
+            playButton: classes["Slidish__play-button"],
+            fullscreenCloseButton: classes["Slidish__close-button--fullscreen"],
+            fullscreenButton: classes["Slidish__fullscreen-button"],
           }}
           styles={{
             root: {},
@@ -152,7 +152,7 @@ const App: React.FC<{}> = function () {
               const player = event.target;
               youtubePlayer.current = player;
             }}
-            onEnd={() => youtubePlayer.current?.stopVideo() && reslideRef.current?.next()}
+            onEnd={() => youtubePlayer.current?.stopVideo() && slidishRef.current?.next()}
           /> */}
           <img src="images/1.jpg" className={classes.image} alt="" />
           <img src="images/2.jpg" className={classes.image} alt="" />
@@ -172,15 +172,15 @@ const App: React.FC<{}> = function () {
           <span className={classes.notImg} style={{ fontSize: 360, color: "red" }}>
             overflowed content
           </span>
-          <button onClick={() => reslideRef.current?.exitFullscreen()}>EXIT FULLSCREEN</button> */}
+          <button onClick={() => slidishRef.current?.exitFullscreen()}>EXIT FULLSCREEN</button> */}
         </Slider>
       ) : null}
-      {/* <button onClick={() => reslideRef.current?.next()}>NEXT</button>
-      <button onClick={() => reslideRef.current?.previous()}>BACK</button>
-      <button onClick={() => reslideRef.current?.play()}>PLAY</button>
-      <button onClick={() => reslideRef.current?.pause()}>PAUSE</button>
-      <button onClick={() => reslideRef.current?.goFullscreen()}>GO FULLSCREEN</button>
-      <button onClick={() => console.log(reslideRef.current?.getState())}>GET STATE</button>
+      {/* <button onClick={() => slidishRef.current?.next()}>NEXT</button>
+      <button onClick={() => slidishRef.current?.previous()}>BACK</button>
+      <button onClick={() => slidishRef.current?.play()}>PLAY</button>
+      <button onClick={() => slidishRef.current?.pause()}>PAUSE</button>
+      <button onClick={() => slidishRef.current?.goFullscreen()}>GO FULLSCREEN</button>
+      <button onClick={() => console.log(slidishRef.current?.getState())}>GET STATE</button>
       <button onClick={() => setStopOnPrev(!stopOnPrev)}>TOGGLE STOP ON PREV</button>
       <button onClick={() => setShowSlider(!showSlider)}>TOGGLE SLIDER COMPONENT</button> */}
     </>

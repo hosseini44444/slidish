@@ -5,29 +5,29 @@ Click on the `VIEW CODE` button below the example and view and edit the full cod
 ```jsx
 import classes from "src/App.module.scss";
 
-<Reslide
+<Slidish
   slideshow={{ autoplay: true }}
   classNames={{
-    root: classes["Reslide__root"],
-    rootFullscreen: classes["Reslide__root--fullscreen"],
-    slidesRoot: classes["Reslide__slides-root"],
-    slidesContainer: classes["Reslide__slides-container"],
-    slide: classes["Reslide__slide"],
-    thumbsRoot: classes["Reslide__thumbs-root"],
-    thumbsContainer: classes["Reslide__thumbs-container"],
-    thumb: classes["Reslide__thumb"],
-    activeThumb: classes["Reslide__thumb--active"],
-    indexIndicator: classes["Reslide__index-indicator"],
-    indicatorsContainer: classes["Reslide__indicators-container"],
-    indicator: classes["Reslide__indicator"],
-    activeIndicator: classes["Reslide__indicator--active"],
-    progressBarContainer: classes["Reslide__progress-bar-container"],
-    progressBar: classes["Reslide__progress-bar"],
-    previousButton: classes["Reslide__previous-button"],
-    nextButton: classes["Reslide__next-button"],
-    playButton: classes["Reslide__play-button"],
-    fullscreenCloseButton: classes["Reslide__close-button--fullscreen"],
-    fullscreenButton: classes["Reslide__fullscreen-button"],
+    root: classes["Slidish__root"],
+    rootFullscreen: classes["Slidish__root--fullscreen"],
+    slidesRoot: classes["Slidish__slides-root"],
+    slidesContainer: classes["Slidish__slides-container"],
+    slide: classes["Slidish__slide"],
+    thumbsRoot: classes["Slidish__thumbs-root"],
+    thumbsContainer: classes["Slidish__thumbs-container"],
+    thumb: classes["Slidish__thumb"],
+    activeThumb: classes["Slidish__thumb--active"],
+    indexIndicator: classes["Slidish__index-indicator"],
+    indicatorsContainer: classes["Slidish__indicators-container"],
+    indicator: classes["Slidish__indicator"],
+    activeIndicator: classes["Slidish__indicator--active"],
+    progressBarContainer: classes["Slidish__progress-bar-container"],
+    progressBar: classes["Slidish__progress-bar"],
+    previousButton: classes["Slidish__previous-button"],
+    nextButton: classes["Slidish__next-button"],
+    playButton: classes["Slidish__play-button"],
+    fullscreenCloseButton: classes["Slidish__close-button--fullscreen"],
+    fullscreenButton: classes["Slidish__fullscreen-button"],
   }}
 >
   <img src="images/1.jpg" className={classes.image} alt="" />
@@ -39,7 +39,7 @@ import classes from "src/App.module.scss";
   <img src="images/7.jpg" className={classes.image} alt="" />
   <img src="images/8.jpg" className={classes.image} alt="" />
   <img src="images/9.jpg" className={classes.image} alt="" />
-</Reslide>;
+</Slidish>;
 ```
 
 <a href="#/Playground"
@@ -212,7 +212,7 @@ $film-color: #3e0f06;
   }
 }
 
-.Reslide__root {
+.Slidish__root {
   @extend %noise;
   // for positioning controls, indicators, progressBar, ...
   position: relative;
@@ -231,8 +231,8 @@ $film-color: #3e0f06;
     box-sizing: border-box;
   }
 }
-.Reslide__root--fullscreen {
-  @extend .Reslide__root;
+.Slidish__root--fullscreen {
+  @extend .Slidish__root;
   position: fixed;
   top: 0;
   left: 0;
@@ -242,17 +242,17 @@ $film-color: #3e0f06;
   height: 100% !important;
   background-color: #000;
 }
-.Reslide__close-button {
+.Slidish__close-button {
   display: none;
 }
-.Reslide__close-button--fullscreen {
+.Slidish__close-button--fullscreen {
   @extend %button;
   display: block;
   top: 0;
   right: 0;
   z-index: 2147483647;
 }
-.Reslide__slides-root {
+.Slidish__slides-root {
   // for positioning slides` children
   position: relative;
   width: 100%;
@@ -273,12 +273,12 @@ $film-color: #3e0f06;
     pointer-events: none;
   }
 }
-.Reslide__slides-container {
+.Slidish__slides-container {
   display: flex;
   height: 100%;
   width: 100%;
 }
-.Reslide__slide {
+.Slidish__slide {
   display: flex;
   // to avoid fitting it's content's width
   width: 100%;
@@ -295,28 +295,28 @@ $film-color: #3e0f06;
     filter: contrast(80%) brightness(140%);
   }
 }
-.Reslide__next-button {
+.Slidish__next-button {
   @extend %button;
   top: 0;
   right: 0;
   height: 100%;
 }
-.Reslide__previous-button {
+.Slidish__previous-button {
   @extend %button;
   top: 0;
   left: 0;
   height: 100%;
 }
-.Reslide__play-button {
+.Slidish__play-button {
   @extend %button;
   bottom: 0;
 }
-.Reslide__fullscreen-button {
+.Slidish__fullscreen-button {
   @extend %button;
   bottom: 0;
   right: 0;
 }
-.Reslide__index-indicator {
+.Slidish__index-indicator {
   position: absolute;
   top: 8px;
   left: 0;
@@ -330,7 +330,7 @@ $film-color: #3e0f06;
   user-select: none;
   z-index: 1;
 }
-.Reslide__indicators-container {
+.Slidish__indicators-container {
   /* To avoid covering slide content (like YouTube controls) and disabling slide pointer-events*/
   pointer-events: none;
   position: absolute;
@@ -344,7 +344,7 @@ $film-color: #3e0f06;
   padding: 0 56px;
   z-index: 1;
 }
-.Reslide__indicator {
+.Slidish__indicator {
   /* to allow pointer-events on indicators while it is disabled in indicators' container div */
   pointer-events: auto;
   display: inline-flex;
@@ -387,12 +387,12 @@ $film-color: #3e0f06;
     }
   }
 }
-.Reslide__indicator--active {
+.Slidish__indicator--active {
   background-color: #a00;
   border-color: #f00;
   transform: rotateZ(180deg) scaleY(1.5);
 }
-.Reslide__thumbs-root {
+.Slidish__thumbs-root {
   position: relative;
   height: 120px !important;
   width: 100%;
@@ -413,11 +413,11 @@ $film-color: #3e0f06;
     border-bottom: 8px dashed #fff;
   }
 }
-.Reslide__thumbs-container {
+.Slidish__thumbs-container {
   display: flex;
   height: 100%;
 }
-.Reslide__thumb {
+.Slidish__thumb {
   position: relative;
   @extend %focus-effect;
   // for centering small thumbs
@@ -441,14 +441,14 @@ $film-color: #3e0f06;
     }
   }
 }
-.Reslide__thumb--active {
-  @extend .Reslide__thumb;
+.Slidish__thumb--active {
+  @extend .Slidish__thumb;
   img {
     filter: none;
     opacity: 100%;
   }
 }
-.Reslide__progress-bar-container {
+.Slidish__progress-bar-container {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -456,7 +456,7 @@ $film-color: #3e0f06;
   overflow: hidden;
   z-index: 1;
 }
-.Reslide__progress-bar {
+.Slidish__progress-bar {
   height: 6px;
   width: 100%;
   border: 1px solid transparent;

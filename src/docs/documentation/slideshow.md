@@ -10,7 +10,7 @@ You can specify the slideshow options using the `slideshow` prop which is an obj
 Click on the `VIEW CODE` button below the example and view and edit the full code using the live code editor
 
 ```jsx
-<Reslide slideshow={{ autoplay: true, playInterval: 1.5, stopOnPrev: true, pauseOnHover: false }}>
+<Slidish slideshow={{ autoplay: true, playInterval: 1.5, stopOnPrev: true, pauseOnHover: false }}>
   <span style={{ fontSize: "3rem" }}>1</span>
   <span style={{ fontSize: "3rem" }}>2</span>
   <span style={{ fontSize: "3rem" }}>3</span>
@@ -19,7 +19,7 @@ Click on the `VIEW CODE` button below the example and view and edit the full cod
   <span style={{ fontSize: "3rem" }}>6</span>
   <span style={{ fontSize: "3rem" }}>7</span>
   <span style={{ fontSize: "3rem" }}>8</span>
-</Reslide>
+</Slidish>
 ```
 
 <a class="previous-section" href="#/Documentation/Advanced%20Options">Advanced Options</a>

@@ -1,17 +1,17 @@
-Reslide uses it's `children` as thumbnails by default.
+Slidish uses it's `children` as thumbnails by default.
 
 If you want to set custom thumbnails for your slides you can do it by setting the `thumbs` prop and passing an array of
 React Nodes like below:
 
 ```jsx static
 import React from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
 const Example = (props) => {
   return (
-    <div id="reslide-container">
-      <Reslide
+    <div id="slidish-container">
+      <Slidish
         thumbs={[
           <span style={{ color: "#08d" }}>1</span>,
           <span style={{ color: "#08d" }}>2</span>,
@@ -33,7 +33,7 @@ const Example = (props) => {
         <img src="images/7.jpg" alt="astronomical image 3" />
         <img src="images/8.jpg" alt="astronomical image 4" />
         <img src="images/9.jpg" alt="astronomical image 5" />
-      </Reslide>
+      </Slidish>
     </div>
   );
 };
@@ -45,8 +45,8 @@ You can also set thumbs by mapping an array of images to an array of `img` eleme
 
 ```jsx static
 import React from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
 const images = [
   { url: "images/thumb1.jpg", alt: "thumbnail #1" },
@@ -58,11 +58,11 @@ const thumbnails = images.map((data) => <img src={data.url} alt={data.alt} />);
 
 const Example = (props) => {
   return (
-    <Reslide thumbs={thumbnails}>
+    <Slidish thumbs={thumbnails}>
       <img src="images/1.jpg" alt="space shuttle failure" />
       <img src="images/2.jpg" alt="space shuttle lunch" />
       <img src="images/3.jpg" alt="space shuttle lunch 2" />
-    </Reslide>
+    </Slidish>
   );
 };
 
@@ -72,7 +72,7 @@ export default Example;
 Click on VIEW CODE button below the example and view and edit the full code using the live code editor
 
 ```jsx
-<Reslide
+<Slidish
   thumbs={[
     <span style={{ color: "#08d" }}>1</span>,
     <span style={{ color: "#08d" }}>2</span>,
@@ -94,7 +94,7 @@ Click on VIEW CODE button below the example and view and edit the full code usin
   <img src="images/7.jpg" alt="astronomical image 3" />
   <img src="images/8.jpg" alt="astronomical image 4" />
   <img src="images/9.jpg" alt="astronomical image 5" />
-</Reslide>
+</Slidish>
 ```
 
 <a class="previous-section" href="#/Documentation/Slideshow">Slideshow</a>

@@ -1,18 +1,18 @@
-Reslide contains builtin TypeScript declarations, the only type you may need to import from the package is the `Methods`
-interface which is used when you need to call the on demand methods of the Reslide like below:
+Slidish contains builtin TypeScript declarations, the only type you may need to import from the package is the `Methods`
+interface which is used when you need to call the on demand methods of the Slidish like below:
 
 ```tsx static
 import React, { useRef } from "react";
 
-import Reslide from "reslide";
-import "reslide/style.css";
-import type { Methods } from "reslide";
+import Slidish from "slidish";
+import "slidish/style.css";
+import type { Methods } from "slidish";
 
 const Example: React.FC<{}> = () => {
-  const reslideRef = useRef<Methods>(null);
+  const slidishRef = useRef<Methods>(null);
   return (
     <React.Fragment>
-      <Reslide ref={reslideRef}>
+      <Slidish ref={slidishRef}>
         <img src="images/1.jpg" alt="space shuttle failure" />
         <img src="images/2.jpg" alt="space shuttle lunch" />
         <img src="images/3.jpg" alt="space shuttle lunch 2" />
@@ -22,7 +22,7 @@ const Example: React.FC<{}> = () => {
         <img src="images/7.jpg" alt="astronomical image 3" />
         <img src="images/8.jpg" alt="astronomical image 4" />
         <img src="images/9.jpg" alt="astronomical image 5" />
-      </Reslide>
+      </Slidish>
       <button onClick={() => sliderRef.current?.next()}>NEXT</button>
     </React.Fragment>
   );

@@ -19,11 +19,11 @@ Click on the `VIEW CODE` button below the example and view and edit the full cod
 
 ```jsx
 import React, { useState, useCallback } from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
 const Example = () => {
-  const [state, setState] = useState("Reslide is mounted!");
+  const [state, setState] = useState("Slidish is mounted!");
   const [change, setChange] = useState("\nStart changing slides");
   const nextHandler = useCallback((ci) => setState(`Went to the next slide from the slide at index ${ci}`), []);
   const previousHandler = useCallback((ci) => setState(`Went to the previous slide from the slide at index ${ci}`), []);
@@ -43,7 +43,7 @@ const Example = () => {
   );
   return (
     <>
-      <Reslide
+      <Slidish
         handlers={{
           onNext: nextHandler,
           onPrevious: previousHandler,
@@ -62,7 +62,7 @@ const Example = () => {
         <span style={{ fontSize: "2rem" }}>3</span>
         <span style={{ fontSize: "2rem" }}>4</span>
         <span style={{ fontSize: "2rem" }}>5</span>
-      </Reslide>
+      </Slidish>
       <div
         style={{
           backgroundColor: "#357",

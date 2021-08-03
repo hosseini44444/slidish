@@ -1,6 +1,6 @@
-### Reslide, React component for building full-featured sliders
+### Slidish, React component for building full-featured sliders
 
-Reslide is a ready to use, simple, highly customizable, responsive React component for building sliders of all types of
+Slidish is a ready to use, simple, highly customizable, responsive React component for building sliders of all types of
 components including images, videos, etc.
 
 <a href="#/Playground"
@@ -11,7 +11,7 @@ style="display: inline-block; padding: 10px 15px; border: 2px solid #06d; font-f
 FANCY DEMO</a>
 
 ```jsx noeditor
-<Reslide slideshow={{ autoplay: true }}>
+<Slidish slideshow={{ autoplay: true }}>
   <img src="images/1.jpg" alt="space shuttle failure" />
   <img src="images/2.jpg" alt="space shuttle lunch" />
   <img src="images/3.jpg" alt="space shuttle lunch 2" />
@@ -21,7 +21,7 @@ FANCY DEMO</a>
   <img src="images/7.jpg" alt="astronomical image 3" />
   <img src="images/8.jpg" alt="astronomical image 4" />
   <img src="images/9.jpg" alt="astronomical image 5" />
-</Reslide>
+</Slidish>
 ```
 
 <a class="next-section" href="#/Features">Features</a>

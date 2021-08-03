@@ -1,27 +1,27 @@
 1- Install the package by running the following command in your project's root folder:
 
 ```bash
-npm install --save reslide
+npm install --save slidish
 ```
 
 2- Import the default export and styles from the installed package:
 
 ```js static
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 ```
 
 3- Start using the package in your react components like below:
 
 ```jsx static
 import React from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
 const MyComponent = (props) => {
   return (
-    <div id="reslide-container">
-      <Reslide>
+    <div id="slidish-container">
+      <Slidish>
         <img src="images/1.jpg" alt="space shuttle failure" />
         <img src="images/2.jpg" alt="space shuttle lunch" />
         <img src="images/3.jpg" alt="space shuttle lunch 2" />
@@ -31,7 +31,7 @@ const MyComponent = (props) => {
         <img src="images/7.jpg" alt="astronomical image 3" />
         <img src="images/8.jpg" alt="astronomical image 4" />
         <img src="images/9.jpg" alt="astronomical image 5" />
-      </Reslide>
+      </Slidish>
     </div>
   );
 };
@@ -42,7 +42,7 @@ export default MyComponent;
 4- Enjoy the result
 
 ```jsx
-<Reslide>
+<Slidish>
   <img src="images/1.jpg" alt="space shuttle failure" />
   <img src="images/2.jpg" alt="space shuttle lunch" />
   <img src="images/3.jpg" alt="space shuttle lunch 2" />
@@ -52,7 +52,7 @@ export default MyComponent;
   <img src="images/7.jpg" alt="astronomical image 3" />
   <img src="images/8.jpg" alt="astronomical image 4" />
   <img src="images/9.jpg" alt="astronomical image 5" />
-</Reslide>
+</Slidish>
 ```
 
 **_Tip:_**
@@ -61,8 +61,8 @@ You can also map data to components and pass them as slides and or thumbs like b
 
 ```jsx static
 import React from "react";
-import Reslide from "reslide";
-import "reslide/style.css";
+import Slidish from "slidish";
+import "slidish/style.css";
 
 const images = [
   { url: "images/1.jpg", description: "space shuttle failure" },
@@ -94,7 +94,7 @@ const slides = images.map((data) => (
   </div>
 ));
 
-const Example = () => <Reslide thumbs={thumbnails}>{slides}</Reslide>;
+const Example = () => <Slidish thumbs={thumbnails}>{slides}</Slidish>;
 
 export default Example;
 ```
@@ -130,7 +130,7 @@ const slides = images.map((data) => (
   </div>
 ));
 
-<Reslide thumbs={thumbnails}>{slides}</Reslide>;
+<Slidish thumbs={thumbnails}>{slides}</Slidish>;
 ```
 
 <a class="previous-section" href="#/Features">Features</a>

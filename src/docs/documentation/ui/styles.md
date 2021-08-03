@@ -1,4 +1,4 @@
-If you want to change the inline style of any of the Reslide's internal components you can do it by changing the keys of
+If you want to change the inline style of any of the Slidish's internal components you can do it by changing the keys of
 `styles` prop which is an object with the following keys:
 
 | key                   | type                | default value | Will be applied to                                                              |

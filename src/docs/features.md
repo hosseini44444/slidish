@@ -22,7 +22,7 @@ FANCY DEMO</a>
 - FullScreen support (via browser api or by using css)
 - Contains builtin TypeScript declaration files
 - Tested on all major web browsers including mobile versions (Chrome, Safari, Firefox, Edge, Opera, IE 11)
-- Fully documented with examples for every option (https://hosseini44444.github.io/reslide/)
+- Fully documented with examples for every option (https://hosseini44444.github.io/slidish/)
 
 <a class="previous-section" href="#/Introduction">Introduction</a>
 <a class="next-section" href="#/Documentation/Getting%20Started">Getting Started</a>
