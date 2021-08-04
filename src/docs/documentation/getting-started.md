@@ -57,6 +57,14 @@ export default MyComponent;
 
 **_Tip:_**
 
+- Every direct child of the `Slidish` will become a unique slide .
+
+- Here we've used images as slides.
+
+- You could insert videos, embedded YouTube videos, divs and any other elements or React components.
+
+**_Tip:_**
+
 You can also map data to components and pass them as slides and or thumbs like below:
 
 ```jsx static

@@ -21,14 +21,14 @@ Click on the `VIEW CODE` button below the example and view and edit the full cod
 <Slidish
   options={{
     height: "400px",
-    width: "50%",
+    width: "100%",
     thumbWidth: 150,
     thumbHeight: "30%",
     thumbMargin: 10,
     startIndex: 4,
     infinite: true,
     startFullscreen: false,
-    useBrowserFullscreen: false,
+    useBrowserFullscreen: true,
     keyboardNavigation: true,
     transitionDuration: 1,
     repeatTransitionDuration: 5,
