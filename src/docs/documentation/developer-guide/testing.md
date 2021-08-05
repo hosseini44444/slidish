@@ -12,7 +12,7 @@ import Slidish from "slidish";
 
 Also you might need to mock `css` imports because **Slidish** exports it's styles using a `style.css` file.
 
-You might also need to mock `ResizeObserver` and `IntersectionObserver` if you want to enable the `lazyLoading` option.
+You might also need to mock `IntersectionObserver` if you want to enable the `lazyLoading` option.
 
 jest configuration via `"jest"` key in `package.json`:
 
@@ -36,15 +36,6 @@ module.exports = {};
 setupTests.js
 
 ```js static
-class MockResizeObserver {
-  constructor(cb) {
-    cb([{ contentRect: { width: 100 } }]);
-  }
-  observe() {}
-  disconnect() {}
-}
-global.ResizeObserver = MockResizeObserver;
-
 class MockIntersectionObserver {
   constructor(cb) {
     cb([{ isIntersecting: false }]);

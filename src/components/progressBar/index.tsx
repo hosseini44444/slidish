@@ -31,7 +31,7 @@ const ProgressBar: React.FC<Props> = ({
   };
 
   return hide ? null : (
-    <div {...containerProps}>
+    <div data-testid="progressBar" {...containerProps}>
       <div style={updatedStyle} className={className} />
     </div>
   );

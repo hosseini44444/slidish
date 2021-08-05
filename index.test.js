@@ -466,3 +466,113 @@ describe("[Slidish] thumbnails functionality", () => {
     expect(thumbnail).toContainHTML("<span>1</span>");
   });
 });
+
+describe("[Slidish] Layout", () => {
+  let rerender,
+    getByTestId,
+    getAllByRole,
+    getByRole,
+    getByText,
+    queryByText,
+    queryByRole,
+    queryAllByRole,
+    queryByTestId;
+  beforeEach(() => {
+    ({
+      rerender,
+      getByTestId,
+      getAllByRole,
+      getByRole,
+      getByText,
+      queryByText,
+      queryByRole,
+      queryAllByRole,
+      queryByTestId,
+    } = render(
+      <Slider testing options={{ startFullscreen: true }}>
+        <span>1</span>
+        <span>2</span>
+        <div>3</div>
+      </Slider>
+    ));
+  });
+  it("should render all components by default", () => {
+    const fsButtons = getAllByRole("button", { name: "exit fullscreen" });
+    expect(fsButtons).toHaveLength(2);
+    const nextButton = getByRole("button", { name: "next slide" });
+    const prevButton = getByRole("button", { name: "previous slide" });
+    const playButton = getByRole("button", { name: "start slideshow" });
+    const indexIndicator = getByText("1 / 3");
+    const indicators = getAllByRole("button", { name: /slide indicator/, exact: false });
+    expect(indicators).toHaveLength(3);
+    const progressBar = getByTestId("progressBar");
+    const slidesContainer = getByTestId("slidesContainer");
+    const thumbsRoot = getByTestId("thumbsRoot");
+  });
+  it("should not render any components when all layout prop keys are set to false", () => {
+    rerender(
+      <Slider
+        testing
+        options={{ startFullscreen: true }}
+        layout={{
+          fullscreenButton: false,
+          fullscreenCloseButton: false,
+          indexIndicator: false,
+          indicators: false,
+          nextButton: false,
+          previousButton: false,
+          playButton: false,
+          slides: false,
+          thumbs: false,
+          progressBar: false,
+        }}
+      >
+        <span>1</span>
+        <span>2</span>
+        <div>3</div>
+      </Slider>
+    );
+    const fsButtons = queryAllByRole("button", { name: "exit fullscreen" });
+    expect(fsButtons).toHaveLength(0);
+    const nextButton = queryByRole("button", { name: "next slide" });
+    const prevButton = queryByRole("button", { name: "previous slide" });
+    const playButton = queryByRole("button", { name: "start slideshow" });
+    const indexIndicator = queryByText("1 / 3");
+    const indicators = queryAllByRole("button", { name: /slide indicator/, exact: false });
+    expect(indicators).toHaveLength(0);
+    const progressBar = queryByTestId("progressBar");
+    const slidesContainer = queryByTestId("slidesContainer");
+    const thumbsRoot = queryByTestId("thumbsRoot");
+    const isEverythingNull = [
+      nextButton,
+      prevButton,
+      playButton,
+      indexIndicator,
+      progressBar,
+      slidesContainer,
+      thumbsRoot,
+    ].every((i) => i === null);
+    expect(isEverythingNull).toBe(true);
+  });
+});
+
+describe("[Slidish] Hardware acceleration", () => {
+  it("shouldn't contain ant translate3d transformations when hardware acceleration is not set", () => {
+    const { getByTestId } = render(
+      <Slider advanced={{ hardwareAcceleration: false }}>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </Slider>
+    );
+    const slidesContainer = getByTestId("slidesContainer");
+    const progressBar = getByTestId("progressBar").firstChild;
+    const thumbsContainer = getByTestId("thumbsContainer");
+    expect(slidesContainer.style.transform).toMatch(/translate/);
+    expect(thumbsContainer.style.transform).toMatch(/translate/);
+    expect(progressBar.style.transform).toMatch(/translate/);    
+    expect(slidesContainer.style.transform).not.toMatch(/translate3d/);
+    expect(thumbsContainer.style.transform).not.toMatch(/translate3d/);
+    expect(progressBar.style.transform).not.toMatch(/translate3d/);    
+  });
+});

@@ -156,7 +156,7 @@ export const useSlidesReducer = (
       default:
         // changed due to [this React bug](https://github.com/facebook/react/issues/21416)
         // return state;
-        return { ...state };
+        throw new Error("[Slidish][reducer] should not be reached");        
     }
   };
   const [state, dispatch] = useReducer(reducer, initialState);

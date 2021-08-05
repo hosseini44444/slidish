@@ -114,6 +114,7 @@
       "text",
       "lcov"
     ],
+    "coverageProvider": "v8",
     "coverageThreshold": {
       "global": {
         "branches": 75,
