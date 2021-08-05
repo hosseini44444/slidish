@@ -83,4 +83,12 @@ export default MyComponent;
 
 4. Enjoy the result
 
+**_Tip:_**
+
+- Every direct child of the `Slidish` will become a unique slide .
+
+- Here we've used images as slides.
+
+- You could insert videos, embedded YouTube videos, divs and any other elements or React components.
+
 ### [Click here for Slidish's full documentation with examples and more](https://hosseini44444.github.io/slidish/)
