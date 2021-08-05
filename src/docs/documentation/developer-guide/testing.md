@@ -27,7 +27,7 @@ jest configuration via `"jest"` key in `package.json`:
 }
 ```
 
-\_\_mocks\_\_/styleMock.js
+<p>\_\_mocks\_\_/styleMock.js</p>
 
 ```js static
 module.exports = {};
@@ -36,14 +36,23 @@ module.exports = {};
 setupTests.js
 
 ```js static
-class mockResizeObserver {
+class MockResizeObserver {
   constructor(cb) {
     cb([{ contentRect: { width: 100 } }]);
   }
   observe() {}
   disconnect() {}
 }
-global.ResizeObserver = mockResizeObserver;
+global.ResizeObserver = MockResizeObserver;
+
+class MockIntersectionObserver {
+  constructor(cb) {
+    cb([{ isIntersecting: false }]);
+  }
+  observe() {}
+  disconnect() {}
+}
+global.IntersectionObserver = MockIntersectionObserver;
 ```
 
 <a class="previous-section" href="#/Documentation/Developer%20Guide/Server%20Side%20Rendering">Server Side Rendering</a>
