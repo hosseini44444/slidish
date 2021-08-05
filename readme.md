@@ -4,6 +4,14 @@ Slidish is a ready to use, simple, highly customizable, responsive React compone
 components including images, videos, etc.
 
 ![npm](https://img.shields.io/npm/v/slidish?style=for-the-badge)
+![NPM](https://img.shields.io/npm/l/slidish?style=for-the-badge)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/hosseini44444/slidish?style=for-the-badge)
+![npms.io (final)](https://img.shields.io/npms-io/quality-score/slidish?style=for-the-badge)
+![Coveralls](https://img.shields.io/coveralls/github/hosseini44444/slidish?style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/hosseini44444/slidish/Package?style=for-the-badge)
+![GitHub tag checks state](https://img.shields.io/github/checks-status/hosseini44444/slidish/v1.0.3?style=for-the-badge)
+![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/slidish?style=for-the-badge)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/slidish?style=for-the-badge)
 
 <a href="https://hosseini44444.github.io/slidish/" target="_blank"
 style="display: inline-block; padding: 10px 15px; border: 2px solid #06d; margin: 10px 10px 20px 0;
