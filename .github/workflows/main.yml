@@ -20,6 +20,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: commit docs
         run: |
+          npm run build:docs
           git config --local user.email "hosseini44444@gmail.com"
           git config --local user.name "Abbas Hosseini"
           git add docs
