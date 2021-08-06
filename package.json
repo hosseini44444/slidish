@@ -39,7 +39,8 @@
     "start": "cross-env NODE_ENV=development webpack serve --config webpack.dev.js",
     "start:docs": "styleguidist server --open",
     "build:demo": "npm run browsersList:update && cross-env BABEL_SHOW_CONFIG_FOR=./src/components/slider/index.tsx NODE_ENV=production webpack",
-    "build": "npm run browsersList:update && eslint src && npm run test && npm run delete-library && npm run build:types && npm run build:lib && npm run build:cjs && npm run generate-style && npm run build:docs",
+    "build:local": "npm run browsersList:update && eslint src && npm run test && npm run delete-library && npm run build:types && npm run build:lib && npm run build:cjs && npm run generate-style && npm run build:docs",
+    "build:ci": "npm run browsersList:update && eslint src && npm run build:types && npm run build:lib && npm run build:cjs && npm run generate-style",
     "build:lib": "cross-env NODE_ENV=production babel src --out-dir library --extensions \".ts\",\".tsx\" --ignore \"src/**/*.d.ts\",\"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/App.tsx\",\"src/demo.tsx\" --no-babelrc --config-file ./.babelrc.lib.json",
     "build:cjs": "cross-env NODE_ENV=production babel src --out-dir library/cjs --extensions \".ts\",\".tsx\" --ignore \"src/**/*.d.ts\",\"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/App.tsx\",\"src/demo.tsx\" --no-babelrc --config-file ./.babelrc.cjs.json",
     "build:types": "tsc -p tsconfig.types.json",
@@ -47,7 +48,7 @@
     "generate-style": "sass ./src/style.scss --no-source-map | postcss --no-map --use autoprefixer -o style.css",
     "delete-library": "rm -rf ./library",
     "test": "jest",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run build:ci",
     "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
