@@ -7,6 +7,8 @@ import "slidish/style.css";
 
 If you want to change the `className` of any of the Slidish's internal components you can do it by changing the keys of `classNames` prop which is an object with the following keys:
 
+<div style="overflow-x: auto;">
+
 | key                   | type   | default value                         | Will be applied to                                                          |
 | --------------------- | ------ | ------------------------------------- | --------------------------------------------------------------------------- |
 | root                  | string | "Slidish\_\_root"                     | outermost div container of all slider elements while not in fullscreen mode |
@@ -29,6 +31,8 @@ If you want to change the `className` of any of the Slidish's internal component
 | playButton            | string | "Slidish\_\_play-button"              | play & pause button                                                         |
 | fullscreenCloseButton | string | "Slidish\_\_close-button--fullscreen" | close button of fullscreen mode                                             |
 | fullscreenButton      | string | "Slidish\_\_fullscreen-button"        | fullscreen & exit fullscreen button                                         |
+
+</div>
 
 In the following example we've used custom classNames which are imported using
 [CSS Modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)

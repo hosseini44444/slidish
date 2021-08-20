@@ -1,5 +1,7 @@
 Slidish's layout consists of the following components which can be disabled by setting the keys in the `layout` prop to false
 
+<div style="overflow-x: auto;">
+
 | key                   | type    | default value | explanation                                                                      |
 | --------------------- | ------- | ------------- | -------------------------------------------------------------------------------- |
 | slides                | boolean | true          | If set to false, slides will be removed from the DOM                             |
@@ -12,6 +14,8 @@ Slidish's layout consists of the following components which can be disabled by s
 | indexIndicator        | boolean | true          | If set to false, indexIndicator will be removed from the DOM                     |
 | indicators            | boolean | true          | If set to false, indicators will be removed from the DOM                         |
 | progressBar           | boolean | true          | If set to false, progressBar will be removed from the DOM                        |
+
+</div>
 
 ```jsx
 import React, { useState } from "react";

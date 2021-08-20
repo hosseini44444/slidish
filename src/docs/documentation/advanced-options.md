@@ -1,5 +1,6 @@
 You can specify the advanced options using the `advanced` prop which is an object with the following keys:
 
+<div style="overflow-x: auto;">
 | key                            | type    | default value                 | explanation                                                                                                                                                                                                        |
 | ------------------------------ | ------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hardwareAcceleration           | boolean | true                          | If set to false translate will be used instead of translate3d for transitioning between slides. @see [translate vs translate3d](https://stackoverflow.com/questions/22111256/translate3d-vs-translate-performance) |
@@ -9,6 +10,7 @@ You can specify the advanced options using the `advanced` prop which is an objec
 | thumbsSlidingSensitivity       | number  | 10                            | Sliding sensitivity in pixels for going to next or previous slide while dragging thumbs. If mouse or touch movement will be below this number no sliding will occur.                                               |
 | transitionTimingFunction       | string  | "cubic-bezier(.1, .3, .5, 1)" | Timing function that will be used while transitioning between slides.                                                                                                                                              |
 | thumbsTransitionTimingFunction | string  | "cubic-bezier(.1, .3, .5, 1)" | Timing function that will be used while transitioning between thumbs.                                                                                                                                              |
+</div>
 
 _Click on the next button to see how slides and thumbs transition._
 
