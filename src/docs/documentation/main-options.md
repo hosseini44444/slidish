@@ -1,5 +1,6 @@
 You can specify the main options using the `options` prop which is an object with the following keys:
 
+<div style="overflow-x: auto;">
 | key                      | type           | default value | explanation                                                                                                                                                                            |
 | ------------------------ | -------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | height                   | string\|number | "500px"       | Total height of the slider component                                                                                                                                                   |
@@ -14,6 +15,7 @@ You can specify the main options using the `options` prop which is an object wit
 | keyboardNavigation       | boolean        | true          | If set to false keyboard navigation using left and right arrows will be disabled                                                                                                       |
 | transitionDuration       | number         | 0.45          | Transition duration in seconds when switching to next or previous slide                                                                                                                |
 | repeatTransitionDuration | number         | 2             | Duration of transitioning between last and first slide in seconds. In conjunction with `transitionDuration` property this will be used to calculate transitioning time between slides. |
+</div>
 
 Click on the `VIEW CODE` button below the example and view and edit the full code using the live code editor
 

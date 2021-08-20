@@ -1,6 +1,8 @@
 If you want to change the inline style of any of the Slidish's internal components you can do it by changing the keys of
 `styles` prop which is an object with the following keys:
 
+<div style="overflow-x: auto;">
+
 | key                   | type                | default value | Will be applied to                                                              |
 | --------------------- | ------------------- | ------------- | ------------------------------------------------------------------------------- |
 | root                  | React.CSSProperties | {}            | the outermost div container of all slider elements while not in fullscreen mode |
@@ -23,6 +25,8 @@ If you want to change the inline style of any of the Slidish's internal componen
 | playButton            | React.CSSProperties | {}            | the play & pause button                                                         |
 | fullscreenCloseButton | React.CSSProperties | {}            | the close button of fullscreen mode                                             |
 | fullscreenButton      | React.CSSProperties | {}            | the fullscreen & exit fullscreen button                                         |
+
+</div>
 
 <a class="previous-section" href="#/Documentation/User%20Interface/ClassNames">ClassNames</a>
 <a class="next-section" href="#/Documentation/Developer%20Guide/Browser%20Support">Browser Support</a>

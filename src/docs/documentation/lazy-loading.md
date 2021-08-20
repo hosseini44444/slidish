@@ -8,12 +8,16 @@ actual slide to be loaded even if the slide is not supposed to be loaded yet.
 
 You can specify the lazy loading options using the `lazyLoading` prop which is an object with the following keys:
 
+<div style="overflow-x: auto;">
+
 | key              | type | default value      | explanation                                                                                                                                                                                                                           |
 | ---------------- | ---- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | enabled          |      | false              | If set to true a place holder will be shown instead of the actual slide or thumbnail when the slide is not loaded or the thumb is not in the view. If thumbs prop is not set, visible thumb will cause the actual slide to be loaded. |
 | preloadCount     |      | 1                  | This property will set the number of slides to be preloaded.                                                                                                                                                                          |
 | placeHolder      |      | "Loading..."       | Placeholder JSX node to be shown instead of the actual slide before loading.                                                                                                                                                          |
 | thumbPlaceHolder |      | "Loading thumb..." | Placeholder JSX node to be shown instead of the actual thumbnail before loading.                                                                                                                                                      |
+
+</div>
 
 To see the effect of lazy loading drag the slides to the right or left to see the custom placeholder and then release it
 so the actual slide will be loaded.

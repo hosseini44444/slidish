@@ -1,11 +1,15 @@
 You can specify the slideshow options using the `slideshow` prop which is an object with the following keys:
 
+<div style="overflow-x: auto;">
+
 | key          | type    | default value | explanation                                                                                                         |
 | ------------ | ------- | ------------- | ------------------------------------------------------------------------------------------------------------------- |
 | autoplay     | boolean | false         | If set to true slideshow will start automatically on mount                                                          |
 | playInterval | number  | 3             | Interval in seconds between each slide while playing                                                                |
 | stopOnPrev   | boolean | false         | If set to true the slideshow will stop if user goes to previous slideshow                                           |
 | pauseOnHover | boolean | false         | If set to true the slideshow will pause when mouse hovers over slides and will play again after leaving the slides. |
+
+</div>
 
 Click on the `VIEW CODE` button below the example and view and edit the full code using the live code editor
 
